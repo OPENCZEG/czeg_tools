@@ -1,0 +1,49 @@
+#+MACRO: version 1.2
+#+DATE: <2020-09-30>  
+#+TITLE: Dokumentace k šabloně evidence údajů o ISVS
+#+AUTHOR: autor
+#+PRIORITIES: 1 5 3 
+#+LANGUAGE: cs
+#+OPTIONS: H:4 toc:nil prop:1  
+#+TODO: NEZAHÁJENO ROZPRACOVANÉ KEKOREKTUŘE POKOREKTUŘE UPRAVOVÁNO | HOTOVO FINÁLNÍ AKTUALIZOVÁNO
+| Název: | {{{TITLE}}} |
+| Předmět: | |
+| Verze: | Verze {{{version}}} ze dne {{{DATE(%d.%m.%Y)}}}
+| Autoři: | {{{AUTHOR}}} |
+| Určeno pro: | |
+| Důvod předložení: | |
+#+TOC: headlines 3
+----------
+* O tomto dokumentu
+:PROPERTIES:
+:unnumbered: Nečíslováno
+:END:
+** Popis a účel dokumentu
+** Historie verzí
+| Datum | Verze | Popis změn |
+|-----+-----+-----|
+** Stav rozpracovanosti částí
+#+BEGIN: columnview :hlines 1 :id global :format "%ITEM(Úsek) %TODO  %Stav %TAGS"
+| ITEM                       | TODO | Stav       | Zpracovává  | TAGS | CLOCKSUM |
+|----------------------------+------+------------+-------------+------+----------|
+| Úvod                       |      | Generováno | Michal Rada |      |     0:01 |
+| Popis a účel dokumentu     |      |            |             |      |          |
+| Historie verzí             |      |            |             |      |          |
+| Stav rozpracovanosti částí |      |            |             |      |          |
+| Časovépřehledy práce       |      |            |             |      |     0:01 |
+#+END:
+** Časovépřehledy práce
+#+BEGIN: clocktable :scope file :maxlevel 2
+#+CAPTION: Clock summary at [2020-08-11 út 11:17]
+| Headline                 | Time   |      |
+|--------------------------+--------+------|
+| *Total time*             | *0:01* |      |
+|--------------------------+--------+------|
+| \_  Časovépřehledy práce |        | 0:01 |
+#+END:
+* Úvod
+* Datová šablona pro evidenci údajů o ISVS
+** Účel a použití
+** Základní struktura JSON šablony
+** Číselníky v šabloně 
+** Specifika k vybraným elementům šablony

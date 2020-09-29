@@ -1,0 +1,15 @@
+  #+TITLE: CZEG TOOLS
+#+AUTHOR: www.openczeg.cz
+#+PRIORITIES: 1 5 3 
+#+LANGUAGE: cs
+#+OPTIONS: H:4 toc:nil prop:1  
+#+TODO: NEZAHÁJENO ROZPRACOVANÉ KEKOREKTUŘE POKOREKTUŘE UPRAVOVÁNO | HOTOVO FINÁLNÍ AKTUALIZOVÁNO
+Čtete readme soubor repository CZEG_TOOLS jež najdete publikované na adrese
+
+https://www.github.com/openczeg/czeg_tools
+
+* Základní informace
+* Obsah repository
+** Kategorie Nástroje
+*** Kategorie Datové šablony a sady
+*** JSON šablona pro vedení údajů o ISVS
