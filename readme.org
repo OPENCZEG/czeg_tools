@@ -10,6 +10,19 @@ https://www.github.com/openczeg/czeg_tools
 
 * Základní informace
 * Obsah repository
+  :PROPERTIES:
+  :COLUMNS:  "%ITEM(Název) %Složka %Verze %Vydáno %TAGS"
+  :END:
 ** Kategorie Nástroje
-*** Kategorie Datové šablony a sady
+** Kategorie Datové šablony a sady
 *** JSON šablona pro vedení údajů o ISVS
+    :PROPERTIES:
+    :SLOŽKA:   /datasets/evidence_udaje_ISVS
+    :END:
+** Kategorie Vzory a šablony a patterny
+*** Vzorový univerzální spisový řád pro elektronickou spisovou službu 2.0
+    :PROPERTIES:
+    :SLOŽKA:   /templates/vzorovy_spisovy_rad_ESSL_moderni
+    :VERZE:    0.1
+    :VYDÁNO:   8.10.2020
+    :END:
