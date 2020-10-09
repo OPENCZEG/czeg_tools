@@ -1,0 +1,81 @@
+#+DATE: <2020-09-30>  
+#+TITLE: Dokumentace k šabloně evidence údajů o ISVS
+#+AUTHOR: autor
+#+PRIORITIES: 1 5 3 
+#+LANGUAGE: cs
+#+OPTIONS: H:4 toc:nil prop:1  
+#+TODO: NEZAHÁJENO ROZPRACOVANÉ KEKOREKTUŘE POKOREKTUŘE UPRAVOVÁNO | HOTOVO FINÁLNÍ AKTUALIZOVÁNO
+Dokumentace k nástroji Datová šablona pro evidenci údajů o ISVS podle vyhlášky 329/2020
+
+- Verze šablony: 1.2, <2020-09-30>
+- Verze dokumentace: 1.2, <2020-09-30>
+- Publikováno na adrese: https://github.com/OPENCZEG/czeg_tools/tree/master/datasets/evidence_udaje_ISVS/v1.2
+----------
+#+TOC: headlines 3
+----------
+* O tomto dokumentu
+:PROPERTIES:
+:unnumbered: Nečíslováno
+:END:
+** Popis a účel dokumentu
+** Historie verzí dokumentace :VersionHistory:
+| Datum | Verze | Popis změn |
+|-----+-----+-----|
+** Stav rozpracovanosti částí
+#+BEGIN: columnview :hlines 1 :id global :format "%ITEM(Úsek) %TODO  %Stav %TAGS"
+| ITEM                       | TODO | Stav       | Zpracovává  | TAGS | CLOCKSUM |
+|----------------------------+------+------------+-------------+------+----------|
+| Úvod                       |      | Generováno | Michal Rada |      |     0:01 |
+| Popis a účel dokumentu     |      |            |             |      |          |
+| Historie verzí             |      |            |             |      |          |
+| Stav rozpracovanosti částí |      |            |             |      |          |
+| Časovépřehledy práce       |      |            |             |      |     0:01 |
+#+END:
+* KEKOREKTUŘE Úvod
+  :LOGBOOK:
+  CLOCK: [2020-10-07 st 08:43]--[2020-10-07 st 08:45] =>  0:02
+  :END:
+Toto je dokumentace k připravené šabloně pro evidenci informačních systémů veřejné správy Takovou  evidenci by jsi měl vést každý správce pro jím spravované informační systémy veřejné správy a to zejména v případě, že budou podle nově koncipované legislativy určenými informačnými   systémy. 
+
+Seznam evidovaných údajů vychází ze struktury stanovené novou vyhláškou 329/2020, která obsahuje rozsah informací jež se evidují při ohlášení ISVS do Registru práv a povinností. Dále je šablona obohacena i o další relevantní údaje, jež by měl správce evidovat ve své evidenci.
+* ROZPRACOVANÉ Datová šablona pro evidenci údajů o ISVS
+** ROZPRACOVANÉ Účel a použití
+** ROZPRACOVANÉ Základní struktura JSON šablony
+   :LOGBOOK:
+   CLOCK: [2020-10-07 st 08:56]--[2020-10-07 st 09:09] =>  0:13
+   :END:
+*** Entita ISVS
+    :PROPERTIES:
+    :Popis:    Toto je hlavní entita v šabloně. Představuje ISVS jako objekt evidence, veškeré skupiny a údaje jsou v této hlavní entitě.
+    :END:
+*** Skupina Popisné údaje
+*** Slovník Právní předpisy
+*** Slovník Agendy
+*** Slovník Etapy životního cyklu
+*** Skupina Správce ISVS
+*** Skupina Provozovatel ISVS
+*** Slovník Dodavatelé ISVS
+*** Slovník Certifikace
+*** Skupina Finanční parametry ISVS
+*** Skupina Využití ISVS
+*** Skupina Úroveň sdílení ISVS
+*** Slovník OVM využívající ISVS
+*** Slovník Aplikační členění ISVS
+*** Skupina
+***  Zpracování osobních údajůČíselníky Valuelists
+    :PROPERTIES:
+    :Popis:    V této entitě první úrovně jsou uvedené jednotlivé číselníky jak jsou buď definovány vyhláškou 329/2020 a nebo mohou být přidány i další číselníky jež jsou nutné pro tuto evidenci.
+    :END:
+Každý číselník je objektem typu Array kde jsou jednotlivé jeho validní
+položky definovány jako prvky daného pole. Pokud je údaj hodnotou z
+tohoto číselníku, udává se jako textový řetězec jehož kontrolou je
+shoda s položkou v tomto číselníku.
+
+** ROZPRACOVANÉ Číselníky v šabloně 
+** ROZPRACOVANÉ Specifika k vybraným elementům šablony
+* Doporučení k formě práce se šablonou a jejímu používání
+* HOTOVO Revize a změny v šabloně (historie verzí)           :VersionHistory:
+** HOTOVO Verze 1.2 publikovaná 30.9.2020
+   :PROPERTIES:
+   :Popis:    První verze publikovaná k veřejnému užití na GIT repository. Obsahuje i první verzi této dokumentace.
+   :END:
