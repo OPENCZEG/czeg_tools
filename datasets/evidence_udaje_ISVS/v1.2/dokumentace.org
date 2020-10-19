@@ -7,8 +7,8 @@
 #+TODO: NEZAHÁJENO ROZPRACOVANÉ KEKOREKTUŘE POKOREKTUŘE UPRAVOVÁNO | HOTOVO FINÁLNÍ AKTUALIZOVÁNO
 Dokumentace k nástroji Datová šablona pro evidenci údajů o ISVS podle vyhlášky 329/2020
 
-- Verze šablony: 1.2, <2020-09-30>
-- Verze dokumentace: 1.2, <2020-09-30>
+- Verze šablony: 1.2, <2020-09-30 st>
+- Verze dokumentace: 1.2, <2020-09-30 st>
 - Publikováno na adrese: https://github.com/OPENCZEG/czeg_tools/tree/master/datasets/evidence_udaje_ISVS/v1.2
 ----------
 #+TOC: headlines 3
@@ -39,30 +39,85 @@ Toto je dokumentace k připravené šabloně pro evidenci informačních systém
 
 Seznam evidovaných údajů vychází ze struktury stanovené novou vyhláškou 329/2020, která obsahuje rozsah informací jež se evidují při ohlášení ISVS do Registru práv a povinností. Dále je šablona obohacena i o další relevantní údaje, jež by měl správce evidovat ve své evidenci.
 * ROZPRACOVANÉ Datová šablona pro evidenci údajů o ISVS
-** ROZPRACOVANÉ Účel a použití
+** KEKOREKTUŘE Účel a použití
+V rámci projektu [OPENCZEG] jsme v [Open-source alianci] připravili JSON dataset template (tedy šablonu pro evidenci dat) k evidenci a struktuře údajů vedených o informačním systému. Primárně se to týká informačních systémů veřejné správy, nicméně dá se použít obecně pro evidenci základních údajů o každém informačním systému o kterém chce jeho správce na jednom místě vést základní údaje jež by tak jako tak měl znát a udržovat aktuální.
+
+V srpnu 2020 vstoupila v platnost nová xxx která stanovuje pro povinnost ohlásit informační systémy veřejné správy do Registru práv a povinností závaznou minimální strukturu údajů o ISVS. Dále zde existuje řada povinností plynoucích k evidenci ISVS i z jiných zákonů a vyhlášek a také z Informační koncepce, Národního architektonického plánu a Národního architektonického rámce. 
+
+
+Šablona ve formátu JSON tedy vychází z kombinace údajů uvedených ve vyhlášce a principů uvedených v NAČR. Jedná se o šablonu pro data o jednom informačním systému v pevné struktuře, včetně údajů o jeho architektonické dekompozici a dodavatelích, apod.
+
+Cílem šablony je usnadnit práci správcům informačních systémů s tvorbou datového modelu pro evidenci IS ze které budou realizovat stanoveným postupem ohlašování a aktualizaci údajů do Rejstříku ISVS v Registru práv a povinností.
 ** ROZPRACOVANÉ Základní struktura JSON šablony
-   :LOGBOOK:
-   CLOCK: [2020-10-07 st 08:56]--[2020-10-07 st 09:09] =>  0:13
+   :PROPERTIES:
+   :COLUMNS:  "%ITEM %Popis %Umístění"
    :END:
+JSON šablona má klasickou strukturu podle specifikace JSON
+formátu. Obsahuje základní entitu do níž jsou vnořeny všechny datové
+položky, datové skupiny a datové slovníky. Slovníky se používají pro
+víceúrovňové členění složitějších objektů.
+
+Kromě základní entity JSON obsahuje i metadata o balíčku a šabloně a
+jeho verzi a také číselníky využívané pro ověřování hodnot u těch dat,
+které jsou podle vyhlášky povinně hodnotou z definovaného číselníku.
 *** Entita ISVS
     :PROPERTIES:
     :Popis:    Toto je hlavní entita v šabloně. Představuje ISVS jako objekt evidence, veškeré skupiny a údaje jsou v této hlavní entitě.
     :END:
 *** Skupina Popisné údaje
+    :PROPERTIES:
+    :POPIS:    Obsahuje základní údaje o jednom informačním systému sloužící pro jeho identifikaci a základní popis.
+    :END:
 *** Slovník Právní předpisy
+    :PROPERTIES:
+    :POPIS:    Obsahuje seznam právních předpisů které definují příslušný ISVS a právní předpisy jež definují co má daný systém evidovat a dělat. Jeho objekty jsou jednotlivé právní předpisy ke kterým se vedou základní údaje o nich, lze dohledat v RPP.
+    :END:
 *** Slovník Agendy
+    :PROPERTIES:
+    :POPIS:    Obsahuje údaje o agendách pro jejichž výkon je daný ISVS ohlášen a pro jejichž výkon systém slouží. U každé agendy jsou o ní nejzákladnější údaje, má vazbu na agendy v RPP.
+    :END:
 *** Slovník Etapy životního cyklu
+    :PROPERTIES:
+    :POPIS:    ISVS je v různých etapách definovaných podle struktury NAP/MŘICT a vyhlášky. Tento slovník obsahuje údaje o jednotlivých etapách. U každé etapy se vedou údaje o jejím průběhu, přičemž ne všechny etapy musí být zakreslené.
+    :END:
 *** Skupina Správce ISVS
+    :PROPERTIES:
+    :POPIS:    Obsahuje informace o správci ISVS jak je buď definován zákonem, nebo jak je věcně. Jedná se o údaje o samotném správci, který daný IS ohlašuje do RPP.
+    :END:
 *** Skupina Provozovatel ISVS
+    :PROPERTIES:
+    :POPIS:    To samé jako u správce, ale toto se týká provozovatele. Vždy to má vázanou identitu na subjektu v ROS. Pozor, provozovatel nemusí být OVM. Opět skupina obsahuje základní údaje o subjektu a organizační jednotce provozovatele.
+    :END:
 *** Slovník Dodavatelé ISVS
+    :PROPERTIES:
+    :POPIS:    Seznam všech dodavatelů daného ISVS a jeho komponent. U každého subjektu dodavatele se uvede i jeho role, tedy zda je dodvatelem nebo subdodavatelem, apod.
+    :END:
 *** Slovník Certifikace
+    :PROPERTIES:
+    :POPIS:    Informace o certifikacích které byly uděleny řešení tohoto systému. Jedná se o uznávané certifikace a certifikáty vydané pro systém.
+    :END:
 *** Skupina Finanční parametry ISVS
+    :PROPERTIES:
+    :POPIS:    Finanční ukazatele pro jednotlivé náklady v jednotlivých etapách. Obsahuje jednotlivé objekty pro finanční parametry přes etapu a rok financování.
+    :END:
 *** Skupina Využití ISVS
+    :PROPERTIES:
+    :POPIS:    Obsahuje údaje o využívání ISVS, kde se rozliší o jaký druh ISVS stran sdílení a využívání se jedna. Na ní pak navazuje povinně vyplněný slovník OVM které daný ISVS využívají.
+    :END:
 *** Skupina Úroveň sdílení ISVS
+    :PROPERTIES:
+    :POPIS:    Obsahuje informace o úrovních užívání ISVS. Buď jako centralizovaný AIS, nebo jako AIS využívaný pouze jedním či úzkou skupinou OVM a uživatelů.
+    :END:
 *** Slovník OVM využívající ISVS
+    :PROPERTIES:
+    :POPIS:    Obsahuje jednotlivé orgány veřejné moci či kategorie OVM které mohou daný informační systém využívat. U každého OVM či jeho skupiny/kategorie jsou k dispozici údaje s vazbou na seznam OVM a kategorií v Katalogu OVM v Registru práv a povinností.
+    :END:
 *** Slovník Aplikační členění ISVS
+    :PROPERTIES:
+    :POPIS:    Tento slovník obsahuje seznam všech ohlášených prvků aplikační architektury, tedy obsahuje aplikační dekompozici systému. Opět se postupuje podle definic a podrobností ve vyhlášce, ale zde i podle předepsané architektury. Obecně platí, že data v tomto slovníku včetně všech jeho objektů musejí mít obraz v architektuře úřadu respektive v architektuře informačního systému. U každého prvku aplikační architektury je uvedena i vazba na dodavatele, respektive vazba dodavatele na daný prvek.
+    :END:
 *** Skupina
-***  Zpracování osobních údajůČíselníky Valuelists
+***  Zpracování osobních údajů
     :PROPERTIES:
     :Popis:    V této entitě první úrovně jsou uvedené jednotlivé číselníky jak jsou buď definovány vyhláškou 329/2020 a nebo mohou být přidány i další číselníky jež jsou nutné pro tuto evidenci.
     :END:
