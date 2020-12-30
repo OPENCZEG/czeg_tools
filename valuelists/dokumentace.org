@@ -1,0 +1,20 @@
+#+DATE: <2020-12-30 st>  
+#+TITLE: Seznam číselníků publikovaných v rámci CZEGTOOLS a jejich popis
+#+AUTHOR:: Projekt #OPENCZEG (www.openczeg.cz)
+#+PRIORITIES: 1 5 3 
+#+LANGUAGE: cs
+#+OPTIONS: H:4 toc:nil prop:1  
+#+TODO: NEZAHÁJENO ROZPRACOVANÉ KEKOREKTUŘE POKOREKTUŘE UPRAVOVÁNO | HOTOVO FINÁLNÍ AKTUALIZOVÁNO
+
+* NEZAHÁJENO Popis sekce Číselníky
+* Přehled jednotlivých číselníků a jejich popis
+V tabulce níže je souhrnný přehled verzí a aktualizací všech námi
+publikovaných číselníků:
+** HOTOVO Číselník stavů aplikační podpory
+   :PROPERTIES:
+   :Identifikátor: číselník/stavy-aplikační-podpory
+   :Verze:    1.0
+   :Datum:    2020-12-30
+   :Popis:    Tento číselník slouží pro sjednocení hodnot stavu aplikační podpory u assesmentu činností vykonávaných úřadem pro potřeby zmapování aplikační podpory v jeho informační koncepci
+   :END:
+* Práce s číselníky

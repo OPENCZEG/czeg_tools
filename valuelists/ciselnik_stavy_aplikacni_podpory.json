@@ -1,0 +1,14 @@
+{
+  "id" : "číselník/stavy-aplikační-podpory",
+  "type" : "číselník",
+  "název-číselníku" : {    "cs" : "Číselník stavů aplikační podpory"
+  },  "položky" : [ 
+
+{ "type" : [ "Stav-AP", "položka" ], "id" : "Stav-AP/1", "kód" : "1", "popis" : { "cs" : "Existuje a je vyhovující" } },
+{ "type" : [ "Stav-AP", "položka" ], "id" : "Stav-AP/2", "kód" : "2", "popis" : { "cs" : "Existuje, ale není vyhovující" } },
+{ "type" : [ "Stav-AP", "položka" ], "id" : "Stav-AP/3", "kód" : "3", "popis" : { "cs" : "Bude se implementovat" } },
+{ "type" : [ "Stav-AP", "položka" ], "id" : "Stav-AP/4", "kód" : "4", "popis" : { "cs" : "Neexistuje, ale je požadována" } },
+{ "type" : [ "Stav-AP", "položka" ], "id" : "Stav-AP/5", "kód" : "5", "popis" : { "cs" : "Neexistuje a není požadována" } },
+
+
+ ]}

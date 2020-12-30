@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
+<head>
+<!-- 2020-10-26 po 08:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dokumentace k šabloně evidence údajů o ISVS</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="autor" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Dokumentace k šabloně evidence údajů o ISVS</h1>
+<p>
+Dokumentace k nástroji Datová šablona pro evidenci údajů o ISVS podle vyhlášky 329/2020
+</p>
+
+<ul class="org-ul">
+<li>Verze šablony: 1.2, <span class="timestamp-wrapper"><span class="timestamp">&lt;2020-09-30 st&gt;</span></span></li>
+<li>Verze dokumentace: 1.2, <span class="timestamp-wrapper"><span class="timestamp">&lt;2020-09-30 st&gt;</span></span></li>
+<li>Publikováno na adrese: <a href="https://github.com/OPENCZEG/czeg_tools/tree/master/datasets/evidence_udaje_ISVS/v1.2">https://github.com/OPENCZEG/czeg_tools/tree/master/datasets/evidence_udaje_ISVS/v1.2</a></li>
+</ul>
+<hr />
+<div id="table-of-contents">
+<h2>Obsah</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org3e7c528">O tomto dokumentu</a>
+<ul>
+<li><a href="#orge77b98e">Popis a účel dokumentu</a></li>
+<li><a href="#orge2051d5">Historie verzí dokumentace&#xa0;&#xa0;&#xa0;<span class="tag"><span class="VersionHistory">VersionHistory</span></span></a></li>
+<li><a href="#orga914218">Stav rozpracovanosti částí</a></li>
+</ul>
+</li>
+<li><a href="#org9e4e296">1. <span class="todo KEKOREKTU_E">KEKOREKTUŘE</span> Úvod</a></li>
+<li><a href="#orgdd74249">2. <span class="todo ROZPRACOVAN_">ROZPRACOVANÉ</span> Datová šablona pro evidenci údajů o ISVS</a>
+<ul>
+<li><a href="#org3cc06d8">2.1. <span class="todo KEKOREKTU_E">KEKOREKTUŘE</span> Účel a použití</a></li>
+<li><a href="#org5b96cab">2.2. <span class="todo ROZPRACOVAN_">ROZPRACOVANÉ</span> Základní struktura JSON šablony</a>
+<ul>
+<li><a href="#org4243eff">2.2.1. Entita ISVS</a></li>
+<li><a href="#org59f63eb">2.2.2. Skupina Popisné údaje</a></li>
+<li><a href="#orgc7d5bdf">2.2.3. Slovník Právní předpisy</a></li>
+<li><a href="#org81b8991">2.2.4. Slovník Agendy</a></li>
+<li><a href="#org12761ea">2.2.5. Slovník Etapy životního cyklu</a></li>
+<li><a href="#org7c11e49">2.2.6. Skupina Správce ISVS</a></li>
+<li><a href="#org8ece9b4">2.2.7. Skupina Provozovatel ISVS</a></li>
+<li><a href="#orgf11af34">2.2.8. Slovník Dodavatelé ISVS</a></li>
+<li><a href="#org0493697">2.2.9. Slovník Certifikace</a></li>
+<li><a href="#org760cfef">2.2.10. Skupina Finanční parametry ISVS</a></li>
+<li><a href="#org61468d4">2.2.11. Skupina Využití ISVS</a></li>
+<li><a href="#org8f24466">2.2.12. Skupina Úroveň sdílení ISVS</a></li>
+<li><a href="#org5999d5e">2.2.13. Slovník OVM využívající ISVS</a></li>
+<li><a href="#orge431dd1">2.2.14. Slovník Aplikační členění ISVS</a></li>
+<li><a href="#orgc2340fc">2.2.15. Skupina</a></li>
+<li><a href="#orge49438a">2.2.16. Zpracování osobních údajů</a></li>
+</ul>
+</li>
+<li><a href="#orgadc041f">2.3. <span class="todo ROZPRACOVAN_">ROZPRACOVANÉ</span> Číselníky v šabloně</a></li>
+<li><a href="#orga2a35d8">2.4. <span class="todo ROZPRACOVAN_">ROZPRACOVANÉ</span> Specifika k vybraným elementům šablony</a></li>
+</ul>
+</li>
+<li><a href="#orgec64192">3. Doporučení k formě práce se šablonou a jejímu používání</a></li>
+<li><a href="#orgd902881">4. <span class="done HOTOVO">HOTOVO</span> Revize a změny v šabloně (historie verzí)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="VersionHistory">VersionHistory</span></span></a>
+<ul>
+<li><a href="#org6624c6d">4.1. <span class="done HOTOVO">HOTOVO</span> Verze 1.2 publikovaná 30.9.2020</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org3e7c528" class="outline-2">
+<h2 id="org3e7c528">O tomto dokumentu</h2>
+<div class="outline-text-2" id="text-org3e7c528">
+<pre class="example">
+unnumbered: Nečíslováno
+</pre>
+</div>
+<div id="outline-container-orge77b98e" class="outline-3">
+<h3 id="orge77b98e">Popis a účel dokumentu</h3>
+</div>
+<div id="outline-container-orge2051d5" class="outline-3">
+<h3 id="orge2051d5">Historie verzí dokumentace&#xa0;&#xa0;&#xa0;<span class="tag"><span class="VersionHistory">VersionHistory</span></span></h3>
+<div class="outline-text-3" id="text-orge2051d5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Datum</td>
+<td class="org-left">Verze</td>
+<td class="org-left">Popis změn</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orga914218" class="outline-3">
+<h3 id="orga914218">Stav rozpracovanosti částí</h3>
+<div class="outline-text-3" id="text-orga914218">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">ITEM</th>
+<th scope="col" class="org-left">TODO</th>
+<th scope="col" class="org-left">Stav</th>
+<th scope="col" class="org-left">Zpracovává</th>
+<th scope="col" class="org-left">TAGS</th>
+<th scope="col" class="org-right">CLOCKSUM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Úvod</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Generováno</td>
+<td class="org-left">Michal Rada</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">0:01</td>
+</tr>
+
+<tr>
+<td class="org-left">Popis a účel dokumentu</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Historie verzí</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Stav rozpracovanosti částí</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Časovépřehledy práce</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">0:01</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org9e4e296" class="outline-2">
+<h2 id="org9e4e296"><span class="section-number-2">1</span> <span class="todo KEKOREKTU_E">KEKOREKTUŘE</span> Úvod</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Toto je dokumentace k připravené šabloně pro evidenci informačních systémů veřejné správy Takovou  evidenci by jsi měl vést každý správce pro jím spravované informační systémy veřejné správy a to zejména v případě, že budou podle nově koncipované legislativy určenými informačnými   systémy. 
+</p>
+
+<p>
+Seznam evidovaných údajů vychází ze struktury stanovené novou vyhláškou 329/2020, která obsahuje rozsah informací jež se evidují při ohlášení ISVS do Registru práv a povinností. Dále je šablona obohacena i o další relevantní údaje, jež by měl správce evidovat ve své evidenci.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdd74249" class="outline-2">
+<h2 id="orgdd74249"><span class="section-number-2">2</span> <span class="todo ROZPRACOVAN_">ROZPRACOVANÉ</span> Datová šablona pro evidenci údajů o ISVS</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org3cc06d8" class="outline-3">
+<h3 id="org3cc06d8"><span class="section-number-3">2.1</span> <span class="todo KEKOREKTU_E">KEKOREKTUŘE</span> Účel a použití</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+V rámci projektu [OPENCZEG] jsme v [Open-source alianci] připravili JSON dataset template (tedy šablonu pro evidenci dat) k evidenci a struktuře údajů vedených o informačním systému. Primárně se to týká informačních systémů veřejné správy, nicméně dá se použít obecně pro evidenci základních údajů o každém informačním systému o kterém chce jeho správce na jednom místě vést základní údaje jež by tak jako tak měl znát a udržovat aktuální.
+</p>
+
+<p>
+V srpnu 2020 vstoupila v platnost nová xxx která stanovuje pro povinnost ohlásit informační systémy veřejné správy do Registru práv a povinností závaznou minimální strukturu údajů o ISVS. Dále zde existuje řada povinností plynoucích k evidenci ISVS i z jiných zákonů a vyhlášek a také z Informační koncepce, Národního architektonického plánu a Národního architektonického rámce. 
+</p>
+
+
+<p>
+Šablona ve formátu JSON tedy vychází z kombinace údajů uvedených ve vyhlášce a principů uvedených v NAČR. Jedná se o šablonu pro data o jednom informačním systému v pevné struktuře, včetně údajů o jeho architektonické dekompozici a dodavatelích, apod.
+</p>
+
+<p>
+Cílem šablony je usnadnit práci správcům informačních systémů s tvorbou datového modelu pro evidenci IS ze které budou realizovat stanoveným postupem ohlašování a aktualizaci údajů do Rejstříku ISVS v Registru práv a povinností.
+</p>
+</div>
+</div>
+<div id="outline-container-org5b96cab" class="outline-3">
+<h3 id="org5b96cab"><span class="section-number-3">2.2</span> <span class="todo ROZPRACOVAN_">ROZPRACOVANÉ</span> Základní struktura JSON šablony</h3>
+<div class="outline-text-3" id="text-2-2">
+<pre class="example">
+COLUMNS: "%ITEM %Popis %Umístění"
+</pre>
+<p>
+JSON šablona má klasickou strukturu podle specifikace JSON
+formátu. Obsahuje základní entitu do níž jsou vnořeny všechny datové
+položky, datové skupiny a datové slovníky. Slovníky se používají pro
+víceúrovňové členění složitějších objektů.
+</p>
+
+<p>
+Kromě základní entity JSON obsahuje i metadata o balíčku a šabloně a
+jeho verzi a také číselníky využívané pro ověřování hodnot u těch dat,
+které jsou podle vyhlášky povinně hodnotou z definovaného číselníku.
+</p>
+</div>
+<div id="outline-container-org4243eff" class="outline-4">
+<h4 id="org4243eff"><span class="section-number-4">2.2.1</span> Entita ISVS</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<pre class="example">
+Popis: Toto je hlavní entita v šabloně. Představuje ISVS jako objekt evidence, veškeré skupiny a údaje jsou v této hlavní entitě.
+</pre>
+</div>
+</div>
+<div id="outline-container-org59f63eb" class="outline-4">
+<h4 id="org59f63eb"><span class="section-number-4">2.2.2</span> Skupina Popisné údaje</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<pre class="example">
+POPIS: Obsahuje základní údaje o jednom informačním systému sloužící pro jeho identifikaci a základní popis.
+</pre>
+</div>
+</div>
+<div id="outline-container-orgc7d5bdf" class="outline-4">
+<h4 id="orgc7d5bdf"><span class="section-number-4">2.2.3</span> Slovník Právní předpisy</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<pre class="example">
+POPIS: Obsahuje seznam právních předpisů které definují příslušný ISVS a právní předpisy jež definují co má daný systém evidovat a dělat. Jeho objekty jsou jednotlivé právní předpisy ke kterým se vedou základní údaje o nich, lze dohledat v RPP.
+</pre>
+</div>
+</div>
+<div id="outline-container-org81b8991" class="outline-4">
+<h4 id="org81b8991"><span class="section-number-4">2.2.4</span> Slovník Agendy</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<pre class="example">
+POPIS: Obsahuje údaje o agendách pro jejichž výkon je daný ISVS ohlášen a pro jejichž výkon systém slouží. U každé agendy jsou o ní nejzákladnější údaje, má vazbu na agendy v RPP.
+</pre>
+</div>
+</div>
+<div id="outline-container-org12761ea" class="outline-4">
+<h4 id="org12761ea"><span class="section-number-4">2.2.5</span> Slovník Etapy životního cyklu</h4>
+<div class="outline-text-4" id="text-2-2-5">
+<pre class="example">
+POPIS: ISVS je v různých etapách definovaných podle struktury NAP/MŘICT a vyhlášky. Tento slovník obsahuje údaje o jednotlivých etapách. U každé etapy se vedou údaje o jejím průběhu, přičemž ne všechny etapy musí být zakreslené.
+</pre>
+</div>
+</div>
+<div id="outline-container-org7c11e49" class="outline-4">
+<h4 id="org7c11e49"><span class="section-number-4">2.2.6</span> Skupina Správce ISVS</h4>
+<div class="outline-text-4" id="text-2-2-6">
+<pre class="example">
+POPIS: Obsahuje informace o správci ISVS jak je buď definován zákonem, nebo jak je věcně. Jedná se o údaje o samotném správci, který daný IS ohlašuje do RPP.
+</pre>
+</div>
+</div>
+<div id="outline-container-org8ece9b4" class="outline-4">
+<h4 id="org8ece9b4"><span class="section-number-4">2.2.7</span> Skupina Provozovatel ISVS</h4>
+<div class="outline-text-4" id="text-2-2-7">
+<pre class="example">
+POPIS: To samé jako u správce, ale toto se týká provozovatele. Vždy to má vázanou identitu na subjektu v ROS. Pozor, provozovatel nemusí být OVM. Opět skupina obsahuje základní údaje o subjektu a organizační jednotce provozovatele.
+</pre>
+</div>
+</div>
+<div id="outline-container-orgf11af34" class="outline-4">
+<h4 id="orgf11af34"><span class="section-number-4">2.2.8</span> Slovník Dodavatelé ISVS</h4>
+<div class="outline-text-4" id="text-2-2-8">
+<pre class="example">
+POPIS: Seznam všech dodavatelů daného ISVS a jeho komponent. U každého subjektu dodavatele se uvede i jeho role, tedy zda je dodvatelem nebo subdodavatelem, apod.
+</pre>
+</div>
+</div>
+<div id="outline-container-org0493697" class="outline-4">
+<h4 id="org0493697"><span class="section-number-4">2.2.9</span> Slovník Certifikace</h4>
+<div class="outline-text-4" id="text-2-2-9">
+<pre class="example">
+POPIS: Informace o certifikacích které byly uděleny řešení tohoto systému. Jedná se o uznávané certifikace a certifikáty vydané pro systém.
+</pre>
+</div>
+</div>
+<div id="outline-container-org760cfef" class="outline-4">
+<h4 id="org760cfef"><span class="section-number-4">2.2.10</span> Skupina Finanční parametry ISVS</h4>
+<div class="outline-text-4" id="text-2-2-10">
+<pre class="example">
+POPIS: Finanční ukazatele pro jednotlivé náklady v jednotlivých etapách. Obsahuje jednotlivé objekty pro finanční parametry přes etapu a rok financování.
+</pre>
+</div>
+</div>
+<div id="outline-container-org61468d4" class="outline-4">
+<h4 id="org61468d4"><span class="section-number-4">2.2.11</span> Skupina Využití ISVS</h4>
+<div class="outline-text-4" id="text-2-2-11">
+<pre class="example">
+POPIS: Obsahuje údaje o využívání ISVS, kde se rozliší o jaký druh ISVS stran sdílení a využívání se jedna. Na ní pak navazuje povinně vyplněný slovník OVM které daný ISVS využívají.
+</pre>
+</div>
+</div>
+<div id="outline-container-org8f24466" class="outline-4">
+<h4 id="org8f24466"><span class="section-number-4">2.2.12</span> Skupina Úroveň sdílení ISVS</h4>
+<div class="outline-text-4" id="text-2-2-12">
+<pre class="example">
+POPIS: Obsahuje informace o úrovních užívání ISVS. Buď jako centralizovaný AIS, nebo jako AIS využívaný pouze jedním či úzkou skupinou OVM a uživatelů.
+</pre>
+</div>
+</div>
+<div id="outline-container-org5999d5e" class="outline-4">
+<h4 id="org5999d5e"><span class="section-number-4">2.2.13</span> Slovník OVM využívající ISVS</h4>
+<div class="outline-text-4" id="text-2-2-13">
+<pre class="example">
+POPIS: Obsahuje jednotlivé orgány veřejné moci či kategorie OVM které mohou daný informační systém využívat. U každého OVM či jeho skupiny/kategorie jsou k dispozici údaje s vazbou na seznam OVM a kategorií v Katalogu OVM v Registru práv a povinností.
+</pre>
+</div>
+</div>
+<div id="outline-container-orge431dd1" class="outline-4">
+<h4 id="orge431dd1"><span class="section-number-4">2.2.14</span> Slovník Aplikační členění ISVS</h4>
+<div class="outline-text-4" id="text-2-2-14">
+<pre class="example">
+POPIS: Tento slovník obsahuje seznam všech ohlášených prvků aplikační architektury, tedy obsahuje aplikační dekompozici systému. Opět se postupuje podle definic a podrobností ve vyhlášce, ale zde i podle předepsané architektury. Obecně platí, že data v tomto slovníku včetně všech jeho objektů musejí mít obraz v architektuře úřadu respektive v architektuře informačního systému. U každého prvku aplikační architektury je uvedena i vazba na dodavatele, respektive vazba dodavatele na daný prvek.
+</pre>
+</div>
+</div>
+<div id="outline-container-orgc2340fc" class="outline-4">
+<h4 id="orgc2340fc"><span class="section-number-4">2.2.15</span> Skupina</h4>
+</div>
+<div id="outline-container-orge49438a" class="outline-4">
+<h4 id="orge49438a"><span class="section-number-4">2.2.16</span> Zpracování osobních údajů</h4>
+<div class="outline-text-4" id="text-2-2-16">
+<pre class="example">
+Popis: V této entitě první úrovně jsou uvedené jednotlivé číselníky jak jsou buď definovány vyhláškou 329/2020 a nebo mohou být přidány i další číselníky jež jsou nutné pro tuto evidenci.
+</pre>
+<p>
+Každý číselník je objektem typu Array kde jsou jednotlivé jeho validní
+položky definovány jako prvky daného pole. Pokud je údaj hodnotou z
+tohoto číselníku, udává se jako textový řetězec jehož kontrolou je
+shoda s položkou v tomto číselníku.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgadc041f" class="outline-3">
+<h3 id="orgadc041f"><span class="section-number-3">2.3</span> <span class="todo ROZPRACOVAN_">ROZPRACOVANÉ</span> Číselníky v šabloně</h3>
+</div>
+<div id="outline-container-orga2a35d8" class="outline-3">
+<h3 id="orga2a35d8"><span class="section-number-3">2.4</span> <span class="todo ROZPRACOVAN_">ROZPRACOVANÉ</span> Specifika k vybraným elementům šablony</h3>
+</div>
+</div>
+<div id="outline-container-orgec64192" class="outline-2">
+<h2 id="orgec64192"><span class="section-number-2">3</span> Doporučení k formě práce se šablonou a jejímu používání</h2>
+</div>
+<div id="outline-container-orgd902881" class="outline-2">
+<h2 id="orgd902881"><span class="section-number-2">4</span> <span class="done HOTOVO">HOTOVO</span> Revize a změny v šabloně (historie verzí)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="VersionHistory">VersionHistory</span></span></h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org6624c6d" class="outline-3">
+<h3 id="org6624c6d"><span class="section-number-3">4.1</span> <span class="done HOTOVO">HOTOVO</span> Verze 1.2 publikovaná 30.9.2020</h3>
+<div class="outline-text-3" id="text-4-1">
+<pre class="example">
+Popis: První verze publikovaná k veřejnému užití na GIT repository. Obsahuje i první verzi této dokumentace.
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Datum: 2020-09-30 st 00:00</p>
+<p class="author">Autor: autor</p>
+<p class="date">Vytvořeno: 2020-10-26 po 08:56</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -116,8 +116,7 @@ které jsou podle vyhlášky povinně hodnotou z definovaného číselníku.
     :PROPERTIES:
     :POPIS:    Tento slovník obsahuje seznam všech ohlášených prvků aplikační architektury, tedy obsahuje aplikační dekompozici systému. Opět se postupuje podle definic a podrobností ve vyhlášce, ale zde i podle předepsané architektury. Obecně platí, že data v tomto slovníku včetně všech jeho objektů musejí mít obraz v architektuře úřadu respektive v architektuře informačního systému. U každého prvku aplikační architektury je uvedena i vazba na dodavatele, respektive vazba dodavatele na daný prvek.
     :END:
-*** Skupina
-***  Zpracování osobních údajů
+*** Skupina  Zpracování osobních údajů
     :PROPERTIES:
     :Popis:    V této entitě první úrovně jsou uvedené jednotlivé číselníky jak jsou buď definovány vyhláškou 329/2020 a nebo mohou být přidány i další číselníky jež jsou nutné pro tuto evidenci.
     :END:
@@ -127,6 +126,14 @@ tohoto číselníku, udává se jako textový řetězec jehož kontrolou je
 shoda s položkou v tomto číselníku.
 
 ** ROZPRACOVANÉ Číselníky v šabloně 
+V rámci JSON šablony je skupina VALUELISTS, kde jsou jednotlivé
+ćíselnóiky využité ve schématu. Jedná se o číselníky převzaté z
+vyhlášky 329/2020.
+
+V této verzi ještě nejsou číselníky publikovány v závazném standardu
+pro datový formát Číselník, jsou zatím publikovány jako array pro
+schéma JSON, v dalších verzích se pokusíme i tyto číselníky vyřešit
+dle závazného formátu.
 ** ROZPRACOVANÉ Specifika k vybraným elementům šablony
 * Doporučení k formě práce se šablonou a jejímu používání
 * HOTOVO Revize a změny v šabloně (historie verzí)           :VersionHistory:
