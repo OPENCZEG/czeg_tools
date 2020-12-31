@@ -1,0 +1,20 @@
+{
+  "id" : "číselník/Kategorie-nákladů-IS",
+  "type" : "číselník",
+  "název-číselníku" : {    "cs" : "Číselník kategorií nákladů financování informačních systémů"
+  },  "položky" : [ 
+
+{ ::type:: : [ ::Finanční-parametr::, ::položka:: ], ::id:: : ::Finanční-parametr/01::, ::kód:: : ::01::, ::popis:: : { ::cs:: : ::náklady nákupního procesu (předběžné analýzy, tvorba zadání, výběr řešení a dodavatele):: } },
+{ ::type:: : [ ::Finanční-parametr::, ::položka:: ], ::id:: : ::Finanční-parametr/02::, ::kód:: : ::02::, ::popis:: : { ::cs:: : ::nákup programového vybavení a technického vybavení pro projekt:: } },
+{ ::type:: : [ ::Finanční-parametr::, ::položka:: ], ::id:: : ::Finanční-parametr/03::, ::kód:: : ::03::, ::popis:: : { ::cs:: : ::analýza, vývoj, implementace a zkušební provoz:: } },
+{ ::type:: : [ ::Finanční-parametr::, ::položka:: ], ::id:: : ::Finanční-parametr/04::, ::kód:: : ::04::, ::popis:: : { ::cs:: : ::produkční provoz a podpora řešení programového vybavení a technického vybavení:: } },
+{ ::type:: : [ ::Finanční-parametr::, ::položka:: ], ::id:: : ::Finanční-parametr/05::, ::kód:: : ::05::, ::popis:: : { ::cs:: : ::údržba a průběžné úpravy programového vybavení a technického vybavení:: } },
+{ ::type:: : [ ::Finanční-parametr::, ::položka:: ], ::id:: : ::Finanční-parametr/06::, ::kód:: : ::06::, ::popis:: : { ::cs:: : ::projekty postupné inovace a zlepšování:: } },
+{ ::type:: : [ ::Finanční-parametr::, ::položka:: ], ::id:: : ::Finanční-parametr/07::, ::kód:: : ::07::, ::popis:: : { ::cs:: : ::projekty upgrade:: } },
+{ ::type:: : [ ::Finanční-parametr::, ::položka:: ], ::id:: : ::Finanční-parametr/08::, ::kód:: : ::08::, ::popis:: : { ::cs:: : ::zvýšené náklady užívání řešení:: } },
+{ ::type:: : [ ::Finanční-parametr::, ::položka:: ], ::id:: : ::Finanční-parametr/09::, ::kód:: : ::09::, ::popis:: : { ::cs:: : ::konzervace a ukončení řešení:: } },
+{ ::type:: : [ ::Finanční-parametr::, ::položka:: ], ::id:: : ::Finanční-parametr/10::, ::kód:: : ::10::, ::popis:: : { ::cs:: : ::náklady na předplatné ICT služby včetně všech odpovídajících přímých interních nákladů:: } },
+{ ::type:: : [ ::Finanční-parametr::, ::položka:: ], ::id:: : ::Finanční-parametr/11::, ::kód:: : ::11::, ::popis:: : { ::cs:: : ::ostatní náklady, které nelze přiřadit k fázi životního cyklu ISVS:: } }
+
+
+ ]}

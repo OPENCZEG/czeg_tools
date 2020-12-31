@@ -7,14 +7,218 @@
 #+TODO: NEZAHÁJENO ROZPRACOVANÉ KEKOREKTUŘE POKOREKTUŘE UPRAVOVÁNO | HOTOVO FINÁLNÍ AKTUALIZOVÁNO
 
 * NEZAHÁJENO Popis sekce Číselníky
-* Přehled jednotlivých číselníků a jejich popis
+V rámci repository CZEGTOOLS jsme vytvořili sekci s veřejně
+publikovanými číselníky, které se týkají eGovernmentu. Jedná se o námi
+vytvořené číselníky zpracované podle [[https://ofn.gov.cz/%C4%8D%C3%ADseln%C3%ADky/draft/][závazné Otevřené formální normy
+pro číselníky]] 
+
+Tyto číselníky ve valné většině nejsou původním dílem projektu
+OPENCZEG, nicméně mají existovat jako standardizované formální
+číselníky, ale dosud v této podobě neexistují a nejsou jejich správci
+publikovány. Nicméně najdete zde i zcela nové původní číselníky. Další
+číselníky jež jsou závazné pro veřejnou správu lze najít kupříkladu i [[https://data.gov.cz/datov%C3%A9-sady?kl%C3%AD%C4%8Dov%C3%A1%20slova=%C4%8D%C3%ADseln%C3%ADk][v Národním katalogu otevřených dat pod klíčovým slovem Číselník]] 
+* HOTOVO Přehled jednotlivých číselníků a jejich popis
+  :PROPERTIES:
+  :COLUMNS:  "%ITEM %Verze %Datum %URL"
+  :END:
 V tabulce níže je souhrnný přehled verzí a aktualizací všech námi
 publikovaných číselníků:
-** HOTOVO Číselník stavů aplikační podpory
+#+BEGIN: columnview :hlines 1 :id local
+| ITEM                                                        | Verze |      Datum | URL                                                                                                 |
+|-------------------------------------------------------------+-------+------------+-----------------------------------------------------------------------------------------------------|
+| Přehled jednotlivých číselníků a jejich popis               |       |            |                                                                                                     |
+| Číselník etap fází informačního systému                     |   1.0 | 2020-08-01 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/aplikacni_podpory.json                |
+| Číselník identifikátorů subjektu                            |   1.0 | 2020-07-01 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_aplikacni_podpory.json |
+| Číselník kategorií činností úřadu                           |   1.0 | 2020-12-30 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/podpory.json                          |
+| Číselník kategorií nákladů financování informačních systémů |   1.0 | 2020-08-01 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/aplikacni_podpor.json                 |
+| Číselník stavů aplikační podpory                            |   1.0 | 2020-12-30 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_aplikacni_podpory.json |
+| Číselník stavů naplnění povinnosti                          |   1.0 | 2020-12-30 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_plneni_povinnosti.json |
+| Číselník typů dodavatelů informačních systémů               |   1.0 | 2020-08-01 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_typy_dodavatelu_is.json      |
+| Číselník titulů zpracování osobních údajů                   |   1.0 | 2020-08-01 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_tituly_zpracovani_udaju.json |
+#+END:
+** HOTOVO Číselník etap fází informačního systému
    :PROPERTIES:
-   :Identifikátor: číselník/stavy-aplikační-podpory
+   :Identifikátor: Etapy-fáze-IS
    :Verze:    1.0
-   :Datum:    2020-12-30
-   :Popis:    Tento číselník slouží pro sjednocení hodnot stavu aplikační podpory u assesmentu činností vykonávaných úřadem pro potřeby zmapování aplikační podpory v jeho informační koncepci
+   :Datum:    2020-08-01
+   :Popis:    Toto je číselník závazných etap při budování a provozu informačního systému a tedy i etap ICT projektu. Vychází ze závazných hodnot stanovených vyhláškou 329/2020 a Metodami řízení ICT VS. Využívá se pro samotné fáze projektu i pro členění financování jednotlivých etap a fází.
+   :URL:      https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/aplikacni_podpory.json
    :END:
-* Práce s číselníky
+ Tento číselník obsahuje následující hodnoty:
+
+ | Kód | Popis |
+ |--+---------   |
+ | 1 | strategie |
+ | 2 | plánování a příprava |
+ | 3 | realizace |
+ | 4 | produkční provoz |
+ | 5 | vyhodnocení |
+ | 6 | ukončení poskytování služby |
+
+ 🔺´POZNÁMKA: V platném znění Vyhlášky č. 329/2020 Sb. je chybně
+ uvedena záměna "fáze" za "etapu". Číselník ve skutečnosti obsahuje
+ etapy jež se poté dělí na jednotlivé fáze a kroky, jak stanovuje
+ dokument Metody řízení ICT veřejné správy. Jde ale pouze o slovní
+ záměnu a správci informačních systémů mohou v tuto chvíli využívat jak
+ fáze tak etapy. Závazné hodnoty jsou, nicméně je vhodné vždy uvádět
+ zda jde o etapu či fázi ve správném kontextu. Chyba nahlášena
+ gestorovi příslušného právního předpisu-.
+** HOTOVO Číselník identifikátorů subjektu
+    :PROPERTIES:
+    :Identifikátor: Identifikátory-subjektu
+    :Verze:    1.0
+    :Datum:    2020-07-01
+    :Popis:    Číselník obsahuje závazné identifikátory subjektu při jeho datové identifikaci v rámci evidencí a informačních systémů. Stanovuje je Národní architektonický plán.
+    :URL:      https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_aplikacni_podpory.json
+    :END:
+ Tento číselník obsahuje následující hodnoty:
+
+ | Kód | Popis |
+ |--+---------   |
+ | FO-AIFO | Agendový identifikátor fyzické osoby |
+ | FO-BSI | Pseudonym od NIA |
+ | FO-KI | Klientský identifikátor |
+ | FO-SI | Stykový identifikátor |
+ | FO-vlastni | Vlastní identifikátor fyzické osoby |
+ | FO-vlastni-JR | Vlastní identifikátor pro účely spisové služby |
+ | PO-IČ | Identifikační číslo právnické osoby |
+ | PO-jiny | Jiný identifikátor právnické osoby |
+
+** HOTOVO Číselník kategorií činností úřadu
+    :PROPERTIES:
+    :Identifikátor: Kategorie-činností
+    :Verze:    1.0
+    :Datum:    2020-12-30
+    :Popis:    V tomto číselníku jsou hodnoty pro kategorizaci činností a procesů úřadu v rámci mapy procesů.
+    :URL:      https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/podpory.json
+    :END:
+ Tento číselník obsahuje následující hodnoty:
+
+ | Kód | Popis |
+ |--+---------   |
+ | PČ | Provozní činnost |
+ | VČ | Veřejnoprávní činost |
+ | VS | Výkon veřejné správy |
+
+** HOTOVO Číselník kategorií nákladů financování informačních systémů
+   :PROPERTIES:
+   :Identifikátor: Kategorie-nákladů-IS
+   :Verze:    1.0
+   :Datum:    2020-08-01
+   :Popis:    Tento číselník obsahuje závazné kategorie nákladů a sledování financování pro informační systémy. Správce využije tyto hodnoty pro roztříděný nákladů a pro vykazování nákladů a finančních parametrů jednotlivých systémů do RPP. Stanovuje jako závazný vyhláška 329/2020.
+    :URL:      https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/aplikacni_podpor.json
+   :END:
+ Tento číselník obsahuje následující hodnoty:
+
+ | Kód | Popis                                                                                   |
+ |-----+-----------------------------------------------------------------------------------------|
+ |  01 | náklady nákupního procesu (předběžné analýzy, tvorba zadání, výběr řešení a dodavatele) |
+ |  02 | nákup programového vybavení a technického vybavení pro projekt                          |
+ |  03 | analýza, vývoj, implementace a zkušební provoz                                          |
+ |  04 | produkční provoz a podpora řešení programového vybavení a technického vybaveního        |
+ |  05 | údržba a průběžné úpravy programového vybavení a technického vybavení                   |
+ |  06 | projekty postupné inovace a zlepšování                                                  |
+ |  07 | projekty upgrade                                                                        |
+ |  08 | zvýšené náklady užívání řešení                                                          |
+ |  09 | konzervace a ukončení řešení                                                            |
+ |  10 | náklady na předplatné ICT služby včetně všech odpovídajících přímých interních nákladů  |
+ |  11 | ostatní náklady, které nelze přiřadit k fázi životního cyklu ISVS                       |
+
+** HOTOVO Číselník stavů aplikační podpory
+    :PROPERTIES:
+    :Identifikátor: číselník/stavy-aplikační-podpory
+    :Verze:    1.0
+    :Datum:    2020-12-30
+    :Popis:    Tento číselník slouží pro sjednocení hodnot stavu aplikační podpory u assesmentu činností vykonávaných úřadem pro potřeby zmapování aplikační podpory v jeho informační koncepci
+    :URL:      https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_aplikacni_podpory.json
+    :END:
+ Tento číselník obsahuje následující hodnoty:
+
+ | Kód | Popis |
+ |--+---------   |
+ | 1 | Existuje a je vyhovující      |
+ | 2 | Existuje, ale není vyhovující |
+ | 3 | Bude se implementovat         |
+ | 4 | Neexistuje, ale je požadována |
+ | 5 | Neexistuje a není požadována  |
+
+** HOTOVO Číselník stavů naplnění povinnosti
+    :PROPERTIES:
+    :Identifikátor: stavy-plnění-povinnosti
+    :Verze:    1.0
+    :Datum:    2020-12-30
+    :Popis:    Tento číselník obsahuje hodnoty jež se použijí v rámci lokální mapy povinností, kde si úřad mapuje zda a jak plní dané povinnosti z Mapy povinností a podle nich si poté stanovuje priority a harmonogramy. Číselník slouží k jasné deklaraci stavu zda úřad danou povinnost plní, nebo ne a nebo pouze částečně
+    :URL:      https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_plneni_povinnosti.json
+    :END:
+
+ Tento číselník obsahuje následující hodnoty:
+
+ | Kód          | Popis        |
+ |--------------+--------------|
+ | castecne | Plní částečně |
+ | neplni       | Dosud neplní |
+ | nerelevantni | Nerelevantní |
+ | plni         | Plní zcela   |
+
+** HOTOVO Číselník typů dodavatelů informačních systémů
+   :PROPERTIES:
+   :Identifikátor: Typy-dodavatelů-IS
+   :Verze:    1.0
+   :Datum:    2020-08-01
+   :Popis:    Tento číselník obsahuje závazné typy dodavatelů využívané pro evidence o informačních systémech a pro řízení dodavatelských vztahů v rámci ICT projektů. Určuje jej závazně vyhláška 329/2020 a využívá se i v evidencích podle Národní architektury eGovernmentu.
+    :URL:      https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_typy_dodavatelu_is.json
+   :END:
+Tento číselník obsahuje následující hodnoty:
+
+| Kód | Popis |
+|--+---------   |
+| 1 | dodavatel aplikačního programového vybavení |
+| 2 | dodavatel základního programového vybavení |
+| 3 | dodavatel aplikační služby |
+| 4 | dodavatel technického vybavení |
+| 5 | dodavatel systémové integrace |
+| 6dodavatel platformy |  |
+| 7 | dodavatel provozní podpory |
+
+** HOTOVO Číselník titulů zpracování osobních údajů
+    :PROPERTIES:
+    :Identifikátor: Tituly-zpracování-OU
+    :Verze:    1.0
+    :Datum:    2020-08-01
+    :Popis:    Číselník právních titulů pro zpracování osobních údajů. Závazný podle zákona 110/2019 a vyhlášky 329/2020
+    :URL:      https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_tituly_zpracovani_udaju.json
+    :END:
+ Tento číselník obsahuje následující hodnoty:
+
+ | Kód | Popis |
+ |--+---------   |
+ | 1 | nezpracovávají se osobní údaje |
+ | 2 | na základě souhlasu subjektu údajů |
+ | 3 | nezbytné pro splnění smlouvy |
+ | 4 | nezbytné pro splnění právní povinnosti |
+ | 5 | nezbytné pro ochranu životně důležitých zájmů subjektu údajů |
+ | 6 | nezbytné pro splnění úkolu prováděného ve veřejném zájmu nebo při výkonu veřejné moci |
+ | 7 | nezbytné pro účely oprávněných zájmů příslušného správce |
+
+
+* NEZAHÁJENO Práce s číselníky
+V rámci repozitáře otevřených formálních norem je publikován také
+[[https://ofn.gov.cz/%C4%8D%C3%ADseln%C3%ADky/draft/][Popis datového formátu pro číselníky]] jež obsahuje popis schématu pro
+číselníky a jak s nimi pracovat.
+
+Každý číselník je zde publikován jako soubor otevřených dat ve formátu
+JSON podle závazného datového schématu. JSON soubor obsahuje v úvodu
+základní informace o číselníku a dále kontejner Položky, v němž jsou
+jednotlivé položky vždy s typem, identifikátorem (Kód) a jejich názvem
+(Popis). V dokumentaci jsou u každého číselníku uvedeny také v
+přehledné tabulce jeho povolené hodnoty. Dále je publikován i souhrnný
+CSV soubor se všemi hodnotami všech publikovaných číselníků.
+
+Jednotlivé organizace číselníky využijí tak, že do svých informačních
+systémů:
+
+1. Buď prostřednictvím URL a požadavku JSON dataset přímo integrují
+   daný číselník, nebo
+2. V rámci sofistikovanější správy číselníků naimportují hodnoty
+   číselníku do příslušné evidence přímo
+

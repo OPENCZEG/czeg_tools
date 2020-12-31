@@ -1,0 +1,14 @@
+{
+  "id" : "číselník/Etapy-fáze-IS",
+  "type" : "číselník",
+  "název-číselníku" : {    "cs" : "Číselník etap fází informačního systému"
+  },  "položky" : [ 
+
+{ "type" : [ "Fáze-IS", "položka" ], "id" : "Fáze-IS/1", "kód" : "1", "popis" : { "cs" : "strategie" } },
+{ "type" : [ "Fáze-IS", "položka" ], "id" : "Fáze-IS/2", "kód" : "2", "popis" : { "cs" : "plánování a příprava" } },
+{ "type" : [ "Fáze-IS", "položka" ], "id" : "Fáze-IS/3", "kód" : "3", "popis" : { "cs" : "realizace" } },
+{ "type" : [ "Fáze-IS", "položka" ], "id" : "Fáze-IS/4", "kód" : "4", "popis" : { "cs" : "produkční provoz" } },
+{ "type" : [ "Fáze-IS", "položka" ], "id" : "Fáze-IS/5", "kód" : "5", "popis" : { "cs" : "vyhodnocení" } },
+{ "type" : [ "Fáze-IS", "položka" ], "id" : "Fáze-IS/6", "kód" : "6", "popis" : { "cs" : "ukončení poskytování služby" } }
+
+ ]}

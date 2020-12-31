@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
+<head>
+<!-- 2020-12-31 čt 05:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Seznam číselníků publikovaných v rámci CZEGTOOLS a jejich popis</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Seznam číselníků publikovaných v rámci CZEGTOOLS a jejich popis</h1>
+
+<div id="outline-container-orgf2def9c" class="outline-2">
+<h2 id="orgf2def9c"><span class="section-number-2">1</span> <span class="todo NEZAH_JENO">NEZAHÁJENO</span> Popis sekce Číselníky</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+V rámci repository CZEGTOOLS jsme vytvořili sekci s veřejně
+publikovanými číselníky, které se týkají eGovernmentu. Jedná se o námi
+vytvořené číselníky zpracované podle <a href="https://ofn.gov.cz/%C4%8D%C3%ADseln%C3%ADky/draft/">závazné Otevřené formální normy
+pro číselníky</a> 
+</p>
+
+<p>
+Tyto číselníky ve valné většině nejsou původním dílem projektu
+OPENCZEG, nicméně mají existovat jako standardizované formální
+číselníky, ale dosud v této podobě neexistují a nejsou jejich správci
+publikovány. Nicméně najdete zde i zcela nové původní číselníky. Další
+číselníky jež jsou závazné pro veřejnou správu lze najít kupříkladu i <a href="https://data.gov.cz/datov%C3%A9-sady?kl%C3%AD%C4%8Dov%C3%A1%20slova=%C4%8D%C3%ADseln%C3%ADk">v Národním katalogu otevřených dat pod klíčovým slovem Číselník</a> 
+</p>
+</div>
+</div>
+<div id="outline-container-orgd6b671b" class="outline-2">
+<h2 id="orgd6b671b"><span class="section-number-2">2</span> <span class="done HOTOVO">HOTOVO</span> Přehled jednotlivých číselníků a jejich popis</h2>
+<div class="outline-text-2" id="text-2">
+<pre class="example">
+COLUMNS: "%ITEM %Verze %Datum %URL"
+</pre>
+<p>
+V tabulce níže je souhrnný přehled verzí a aktualizací všech námi
+publikovaných číselníků:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">ITEM</th>
+<th scope="col" class="org-right">Verze</th>
+<th scope="col" class="org-right">Datum</th>
+<th scope="col" class="org-left">URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Přehled jednotlivých číselníků a jejich popis</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Číselník etap fází informačního systému</td>
+<td class="org-right">1.0</td>
+<td class="org-right">2020-08-01</td>
+<td class="org-left"><a href="https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/aplikacni_podpory.json">https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/aplikacni_podpory.json</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Číselník identifikátorů subjektu</td>
+<td class="org-right">1.0</td>
+<td class="org-right">2020-07-01</td>
+<td class="org-left"><a href="https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_aplikacni_podpory.json">https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_aplikacni_podpory.json</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Číselník kategorií činností úřadu</td>
+<td class="org-right">1.0</td>
+<td class="org-right">2020-12-30</td>
+<td class="org-left"><a href="https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/podpory.json">https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/podpory.json</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Číselník kategorií nákladů financování informačních systémů</td>
+<td class="org-right">1.0</td>
+<td class="org-right">2020-08-01</td>
+<td class="org-left"><a href="https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/aplikacni_podpor.json">https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/aplikacni_podpor.json</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Číselník stavů aplikační podpory</td>
+<td class="org-right">1.0</td>
+<td class="org-right">2020-12-30</td>
+<td class="org-left"><a href="https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_aplikacni_podpory.json">https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_aplikacni_podpory.json</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Číselník stavů naplnění povinnosti</td>
+<td class="org-right">1.0</td>
+<td class="org-right">2020-12-30</td>
+<td class="org-left"><a href="https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_plneni_povinnosti.json">https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_plneni_povinnosti.json</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Číselník typů dodavatelů informačních systémů</td>
+<td class="org-right">1.0</td>
+<td class="org-right">2020-08-01</td>
+<td class="org-left"><a href="https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_typy_dodavatelu_is.json">https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_typy_dodavatelu_is.json</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Číselník titulů zpracování osobních údajů</td>
+<td class="org-right">1.0</td>
+<td class="org-right">2020-08-01</td>
+<td class="org-left"><a href="https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_tituly_zpracovani_udaju.json">https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_tituly_zpracovani_udaju.json</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outline-container-org716dc1a" class="outline-3">
+<h3 id="org716dc1a"><span class="section-number-3">2.1</span> <span class="done HOTOVO">HOTOVO</span> Číselník etap fází informačního systému</h3>
+<div class="outline-text-3" id="text-2-1">
+<pre class="example">
+Identifikátor: Etapy-fáze-IS
+Verze: 1.0
+Datum: 2020-08-01
+Popis: Toto je číselník závazných etap při budování a provozu informačního systému a tedy i etap ICT projektu. Vychází ze závazných hodnot stanovených vyhláškou 329/2020 a Metodami řízení ICT VS. Využívá se pro samotné fáze projektu i pro členění financování jednotlivých etap a fází.
+URL: https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/aplikacni_podpory.json
+</pre>
+<p>
+Tento číselník obsahuje následující hodnoty:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Kód</th>
+<th scope="col" class="org-left">Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">strategie</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">plánování a příprava</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">realizace</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">produkční provoz</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">vyhodnocení</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">ukončení poskytování služby</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+🔺´POZNÁMKA: V platném znění Vyhlášky č. 329/2020 Sb. je chybně
+uvedena záměna "fáze" za "etapu". Číselník ve skutečnosti obsahuje
+etapy jež se poté dělí na jednotlivé fáze a kroky, jak stanovuje
+dokument Metody řízení ICT veřejné správy. Jde ale pouze o slovní
+záměnu a správci informačních systémů mohou v tuto chvíli využívat jak
+fáze tak etapy. Závazné hodnoty jsou, nicméně je vhodné vždy uvádět
+zda jde o etapu či fázi ve správném kontextu. Chyba nahlášena
+gestorovi příslušného právního předpisu-.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfd2a5c7" class="outline-3">
+<h3 id="orgfd2a5c7"><span class="section-number-3">2.2</span> <span class="done HOTOVO">HOTOVO</span> Číselník identifikátorů subjektu</h3>
+<div class="outline-text-3" id="text-2-2">
+<pre class="example">
+Identifikátor: Identifikátory-subjektu
+Verze: 1.0
+Datum: 2020-07-01
+Popis: Číselník obsahuje závazné identifikátory subjektu při jeho datové identifikaci v rámci evidencí a informačních systémů. Stanovuje je Národní architektonický plán.
+URL: https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_aplikacni_podpory.json
+</pre>
+<p>
+Tento číselník obsahuje následující hodnoty:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Kód</th>
+<th scope="col" class="org-left">Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">FO-AIFO</td>
+<td class="org-left">Agendový identifikátor fyzické osoby</td>
+</tr>
+
+<tr>
+<td class="org-left">FO-BSI</td>
+<td class="org-left">Pseudonym od NIA</td>
+</tr>
+
+<tr>
+<td class="org-left">FO-KI</td>
+<td class="org-left">Klientský identifikátor</td>
+</tr>
+
+<tr>
+<td class="org-left">FO-SI</td>
+<td class="org-left">Stykový identifikátor</td>
+</tr>
+
+<tr>
+<td class="org-left">FO-vlastni</td>
+<td class="org-left">Vlastní identifikátor fyzické osoby</td>
+</tr>
+
+<tr>
+<td class="org-left">FO-vlastni-JR</td>
+<td class="org-left">Vlastní identifikátor pro účely spisové služby</td>
+</tr>
+
+<tr>
+<td class="org-left">PO-IČ</td>
+<td class="org-left">Identifikační číslo právnické osoby</td>
+</tr>
+
+<tr>
+<td class="org-left">PO-jiny</td>
+<td class="org-left">Jiný identifikátor právnické osoby</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org5c59c3d" class="outline-3">
+<h3 id="org5c59c3d"><span class="section-number-3">2.3</span> <span class="done HOTOVO">HOTOVO</span> Číselník kategorií činností úřadu</h3>
+<div class="outline-text-3" id="text-2-3">
+<pre class="example">
+Identifikátor: Kategorie-činností
+Verze: 1.0
+Datum: 2020-12-30
+Popis: V tomto číselníku jsou hodnoty pro kategorizaci činností a procesů úřadu v rámci mapy procesů.
+URL: https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/podpory.json
+</pre>
+<p>
+Tento číselník obsahuje následující hodnoty:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Kód</th>
+<th scope="col" class="org-left">Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">PČ</td>
+<td class="org-left">Provozní činnost</td>
+</tr>
+
+<tr>
+<td class="org-left">VČ</td>
+<td class="org-left">Veřejnoprávní činost</td>
+</tr>
+
+<tr>
+<td class="org-left">VS</td>
+<td class="org-left">Výkon veřejné správy</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org953351b" class="outline-3">
+<h3 id="org953351b"><span class="section-number-3">2.4</span> <span class="done HOTOVO">HOTOVO</span> Číselník kategorií nákladů financování informačních systémů</h3>
+<div class="outline-text-3" id="text-2-4">
+<pre class="example">
+Identifikátor: Kategorie-nákladů-IS
+Verze: 1.0
+Datum: 2020-08-01
+Popis: Tento číselník obsahuje závazné kategorie nákladů a sledování financování pro informační systémy. Správce využije tyto hodnoty pro roztříděný nákladů a pro vykazování nákladů a finančních parametrů jednotlivých systémů do RPP. Stanovuje jako závazný vyhláška 329/2020.
+URL: https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/aplikacni_podpor.json
+</pre>
+<p>
+Tento číselník obsahuje následující hodnoty:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Kód</th>
+<th scope="col" class="org-left">Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">01</td>
+<td class="org-left">náklady nákupního procesu (předběžné analýzy, tvorba zadání, výběr řešení a dodavatele)</td>
+</tr>
+
+<tr>
+<td class="org-right">02</td>
+<td class="org-left">nákup programového vybavení a technického vybavení pro projekt</td>
+</tr>
+
+<tr>
+<td class="org-right">03</td>
+<td class="org-left">analýza, vývoj, implementace a zkušební provoz</td>
+</tr>
+
+<tr>
+<td class="org-right">04</td>
+<td class="org-left">produkční provoz a podpora řešení programového vybavení a technického vybaveního</td>
+</tr>
+
+<tr>
+<td class="org-right">05</td>
+<td class="org-left">údržba a průběžné úpravy programového vybavení a technického vybavení</td>
+</tr>
+
+<tr>
+<td class="org-right">06</td>
+<td class="org-left">projekty postupné inovace a zlepšování</td>
+</tr>
+
+<tr>
+<td class="org-right">07</td>
+<td class="org-left">projekty upgrade</td>
+</tr>
+
+<tr>
+<td class="org-right">08</td>
+<td class="org-left">zvýšené náklady užívání řešení</td>
+</tr>
+
+<tr>
+<td class="org-right">09</td>
+<td class="org-left">konzervace a ukončení řešení</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">náklady na předplatné ICT služby včetně všech odpovídajících přímých interních nákladů</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">ostatní náklady, které nelze přiřadit k fázi životního cyklu ISVS</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgaf363b5" class="outline-3">
+<h3 id="orgaf363b5"><span class="section-number-3">2.5</span> <span class="done HOTOVO">HOTOVO</span> Číselník stavů aplikační podpory</h3>
+<div class="outline-text-3" id="text-2-5">
+<pre class="example">
+Identifikátor: číselník/stavy-aplikační-podpory
+Verze: 1.0
+Datum: 2020-12-30
+Popis: Tento číselník slouží pro sjednocení hodnot stavu aplikační podpory u assesmentu činností vykonávaných úřadem pro potřeby zmapování aplikační podpory v jeho informační koncepci
+URL: https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_aplikacni_podpory.json
+</pre>
+<p>
+Tento číselník obsahuje následující hodnoty:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Kód</th>
+<th scope="col" class="org-left">Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Existuje a je vyhovující</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">Existuje, ale není vyhovující</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Bude se implementovat</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Neexistuje, ale je požadována</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Neexistuje a není požadována</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgcc4f185" class="outline-3">
+<h3 id="orgcc4f185"><span class="section-number-3">2.6</span> <span class="done HOTOVO">HOTOVO</span> Číselník stavů naplnění povinnosti</h3>
+<div class="outline-text-3" id="text-2-6">
+<pre class="example">
+Identifikátor: stavy-plnění-povinnosti
+Verze: 1.0
+Datum: 2020-12-30
+Popis: Tento číselník obsahuje hodnoty jež se použijí v rámci lokální mapy povinností, kde si úřad mapuje zda a jak plní dané povinnosti z Mapy povinností a podle nich si poté stanovuje priority a harmonogramy. Číselník slouží k jasné deklaraci stavu zda úřad danou povinnost plní, nebo ne a nebo pouze částečně
+URL: https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_plneni_povinnosti.json
+</pre>
+
+<p>
+Tento číselník obsahuje následující hodnoty:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Kód</th>
+<th scope="col" class="org-left">Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">castecne</td>
+<td class="org-left">Plní částečně</td>
+</tr>
+
+<tr>
+<td class="org-left">neplni</td>
+<td class="org-left">Dosud neplní</td>
+</tr>
+
+<tr>
+<td class="org-left">nerelevantni</td>
+<td class="org-left">Nerelevantní</td>
+</tr>
+
+<tr>
+<td class="org-left">plni</td>
+<td class="org-left">Plní zcela</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgfd60b0f" class="outline-3">
+<h3 id="orgfd60b0f"><span class="section-number-3">2.7</span> <span class="done HOTOVO">HOTOVO</span> Číselník typů dodavatelů informačních systémů</h3>
+<div class="outline-text-3" id="text-2-7">
+<pre class="example">
+Identifikátor: Typy-dodavatelů-IS
+Verze: 1.0
+Datum: 2020-08-01
+Popis: Tento číselník obsahuje závazné typy dodavatelů využívané pro evidence o informačních systémech a pro řízení dodavatelských vztahů v rámci ICT projektů. Určuje jej závazně vyhláška 329/2020 a využívá se i v evidencích podle Národní architektury eGovernmentu.
+URL: https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_typy_dodavatelu_is.json
+</pre>
+<p>
+Tento číselník obsahuje následující hodnoty:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Kód</th>
+<th scope="col" class="org-left">Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">dodavatel aplikačního programového vybavení</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">dodavatel základního programového vybavení</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">dodavatel aplikační služby</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">dodavatel technického vybavení</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">dodavatel systémové integrace</td>
+</tr>
+
+<tr>
+<td class="org-right">6dodavatel platformy</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">dodavatel provozní podpory</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org0d775b3" class="outline-3">
+<h3 id="org0d775b3"><span class="section-number-3">2.8</span> <span class="done HOTOVO">HOTOVO</span> Číselník titulů zpracování osobních údajů</h3>
+<div class="outline-text-3" id="text-2-8">
+<pre class="example">
+Identifikátor: Tituly-zpracování-OU
+Verze: 1.0
+Datum: 2020-08-01
+Popis: Číselník právních titulů pro zpracování osobních údajů. Závazný podle zákona 110/2019 a vyhlášky 329/2020
+URL: https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_tituly_zpracovani_udaju.json
+</pre>
+<p>
+Tento číselník obsahuje následující hodnoty:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Kód</th>
+<th scope="col" class="org-left">Popis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">nezpracovávají se osobní údaje</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">na základě souhlasu subjektu údajů</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">nezbytné pro splnění smlouvy</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">nezbytné pro splnění právní povinnosti</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">nezbytné pro ochranu životně důležitých zájmů subjektu údajů</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">nezbytné pro splnění úkolu prováděného ve veřejném zájmu nebo při výkonu veřejné moci</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">nezbytné pro účely oprávněných zájmů příslušného správce</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orga4c7705" class="outline-2">
+<h2 id="orga4c7705"><span class="section-number-2">3</span> <span class="todo NEZAH_JENO">NEZAHÁJENO</span> Práce s číselníky</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+V rámci repozitáře otevřených formálních norem je publikován také
+<a href="https://ofn.gov.cz/%C4%8D%C3%ADseln%C3%ADky/draft/">Popis datového formátu pro číselníky</a> jež obsahuje popis schématu pro
+číselníky a jak s nimi pracovat.
+</p>
+
+<p>
+Každý číselník je zde publikován jako soubor otevřených dat ve formátu
+JSON podle závazného datového schématu. JSON soubor obsahuje v úvodu
+základní informace o číselníku a dále kontejner Položky, v němž jsou
+jednotlivé položky vždy s typem, identifikátorem (Kód) a jejich názvem
+(Popis). V dokumentaci jsou u každého číselníku uvedeny také v
+přehledné tabulce jeho povolené hodnoty. Dále je publikován i souhrnný
+CSV soubor se všemi hodnotami všech publikovaných číselníků.
+</p>
+
+<p>
+Jednotlivé organizace číselníky využijí tak, že do svých informačních
+systémů:
+</p>
+
+<ol class="org-ol">
+<li>Buď prostřednictvím URL a požadavku JSON dataset přímo integrují
+daný číselník, nebo</li>
+<li>V rámci sofistikovanější správy číselníků naimportují hodnoty
+číselníku do příslušné evidence přímo</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Datum: 2020-12-30 st 00:00</p>
+<p class="date">Vytvořeno: 2020-12-31 čt 05:59</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

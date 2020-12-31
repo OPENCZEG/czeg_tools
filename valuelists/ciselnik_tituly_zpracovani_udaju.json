@@ -1,0 +1,15 @@
+{
+  "id" : "číselník/Tituly-zpracování-OU",
+  "type" : "číselník",
+  "název-číselníku" : {    "cs" : "Číselník titulů zpracování osobních údajů"
+  },  "položky" : [ 
+
+{ "type" : [ "Titul-OU", "položka" ], "id" : "Titul-OU/1", "kód" : "1", "popis" : { "cs" : "nezpracovávají se osobní údaje" } },
+{ "type" : [ "Titul-OU", "položka" ], "id" : "Titul-OU/2", "kód" : "2", "popis" : { "cs" : "na základě souhlasu subjektu údajů" } },
+{ "type" : [ "Titul-OU", "položka" ], "id" : "Titul-OU/3", "kód" : "3", "popis" : { "cs" : "nezbytné pro splnění smlouvy" } },
+{ "type" : [ "Titul-OU", "položka" ], "id" : "Titul-OU/4", "kód" : "4", "popis" : { "cs" : "nezbytné pro splnění právní povinnosti" } },
+{ "type" : [ "Titul-OU", "položka" ], "id" : "Titul-OU/5", "kód" : "5", "popis" : { "cs" : "nezbytné pro ochranu životně důležitých zájmů subjektu údajů" } },
+{ "type" : [ "Titul-OU", "položka" ], "id" : "Titul-OU/6", "kód" : "6", "popis" : { "cs" : "nezbytné pro splnění úkolu prováděného ve veřejném zájmu nebo při výkonu veřejné moci" } },
+{ "type" : [ "Titul-OU", "položka" ], "id" : "Titul-OU/7", "kód" : "7", "popis" : { "cs" : "nezbytné pro účely oprávněných zájmů příslušného správce" } }
+
+ ]}

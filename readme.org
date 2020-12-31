@@ -26,3 +26,13 @@ https://www.github.com/openczeg/czeg_tools
     :VERZE:    0.1
     :VYDÁNO:   8.10.2020
     :END:
+** Kategorie Číselníky
+:PROPERTIES:
+    :SLOŽKA:   /valuelists
+:END:
+Samostatnou sekci VALUELISTS tvoří seznam publikovaných veřejných
+číselníků. Jedná se o číselníky, které dosud nejsou publikovány v
+rámci Národního katalogu otevřených dat, ale jsou tak či tak pro
+veřejnou správu závazné. 
+
+Sekce má vlastní dokumentaci.

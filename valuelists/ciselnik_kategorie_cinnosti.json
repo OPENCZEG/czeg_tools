@@ -1,0 +1,12 @@
+{
+  "id" : "číselník/Kategorie-činností",
+  "type" : "číselník",
+  "název-číselníku" : {    "cs" : "Číselník kategorií činností úřadu"
+  },  "položky" : [ 
+
+{ "type" : [ "Kategorie-činnosti", "položka" ], "id" : "Kategorie-činnosti/PČ", "kód" : "PČ", "popis" : { "cs" : "Provozní činnost" } },
+{ "type" : [ "Kategorie-činnosti", "položka" ], "id" : "Kategorie-činnosti/VČ", "kód" : "VČ", "popis" : { "cs" : "Veřejnoprávní činost" } },
+{ "type" : [ "Kategorie-činnosti", "položka" ], "id" : "Kategorie-činnosti/VS", "kód" : "VS", "popis" : { "cs" : "Výkon veřejné správy" } }
+
+
+ ]}

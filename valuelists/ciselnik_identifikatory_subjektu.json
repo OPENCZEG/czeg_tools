@@ -1,0 +1,16 @@
+{
+  "id" : "číselník/Identifikátory-subjektu",
+  "type" : "číselník",
+  "název-číselníku" : {    "cs" : "Číselník identifikátorů subjektu"
+  },  "položky" : [ 
+
+{ "type" : [ "Typ-identifikátoru", "položka" ], "id" : "Typ-identifikátoru/FO-AIFO", "kód" : "FO-AIFO", "popis" : { "cs" : "Agendový identifikátor fyzické osoby" } },
+{ "type" : [ "Typ-identifikátoru", "položka" ], "id" : "Typ-identifikátoru/FO-BSI", "kód" : "FO-BSI", "popis" : { "cs" : "Pseudonym od NIA" } },
+{ "type" : [ "Typ-identifikátoru", "položka" ], "id" : "Typ-identifikátoru/FO-KI", "kód" : "FO-KI", "popis" : { "cs" : "Klientský identifikátor" } },
+{ "type" : [ "Typ-identifikátoru", "položka" ], "id" : "Typ-identifikátoru/FO-SI", "kód" : "FO-SI", "popis" : { "cs" : "Stykový identifikátor" } },
+{ "type" : [ "Typ-identifikátoru", "položka" ], "id" : "Typ-identifikátoru/FO-vlastni", "kód" : "FO-vlastni", "popis" : { "cs" : "Vlastní identifikátor fyzické osoby" } },
+{ "type" : [ "Typ-identifikátoru", "položka" ], "id" : "Typ-identifikátoru/FO-vlastni-JR", "kód" : "FO-vlastni-JR", "popis" : { "cs" : "Vlastní identifikátor pro účely spisové služby" } },
+{ "type" : [ "Typ-identifikátoru", "položka" ], "id" : "Typ-identifikátoru/PO-IČ", "kód" : "PO-IČ", "popis" : { "cs" : "Identifikační číslo právnické osoby" } },
+{ "type" : [ "Typ-identifikátoru", "položka" ], "id" : "Typ-identifikátoru/PO-jiny", "kód" : "PO-jiny", "popis" : { "cs" : "Jiný identifikátor právnické osoby" } }
+
+ ]}

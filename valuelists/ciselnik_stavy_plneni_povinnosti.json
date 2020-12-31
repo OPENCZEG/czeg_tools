@@ -1,0 +1,13 @@
+{
+  "id" : "číselník/stavy-plnění-povinnosti",
+  "type" : "číselník",
+  "název-číselníku" : {    "cs" : "Číselník stavů naplnění povinnosti"
+  },  "položky" : [ 
+
+{ "type" : [ "Stav-povinnosti", "položka" ], "id" : "Stav-povinnosti/castecne", "kód" : "castecne", "popis" : { "cs" : "Plní částečně" } },
+{ "type" : [ "Stav-povinnosti", "položka" ], "id" : "Stav-povinnosti/neplni", "kód" : "neplni", "popis" : { "cs" : "Dosud neplní" } },
+{ "type" : [ "Stav-povinnosti", "položka" ], "id" : "Stav-povinnosti/nerelevantni", "kód" : "nerelevantni", "popis" : { "cs" : "Nerelevantní" } },
+{ "type" : [ "Stav-povinnosti", "položka" ], "id" : "Stav-povinnosti/plni", "kód" : "plni", "popis" : { "cs" : "Plní zcela" } }
+
+
+ ]}
