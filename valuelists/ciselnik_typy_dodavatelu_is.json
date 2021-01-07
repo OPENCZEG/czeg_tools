@@ -9,7 +9,7 @@
 { "type" : [ "Typ-dodavatele", "položka" ], "id" : "Typ-dodavatele/3", "kód" : "3", "popis" : { "cs" : "dodavatel aplikační služby" } },
 { "type" : [ "Typ-dodavatele", "položka" ], "id" : "Typ-dodavatele/4", "kód" : "4", "popis" : { "cs" : "dodavatel technického vybavení" } },
 { "type" : [ "Typ-dodavatele", "položka" ], "id" : "Typ-dodavatele/5", "kód" : "5", "popis" : { "cs" : "dodavatel systémové integrace" } },
-{ "type" : [ "Typ-dodavatele", "položka" ], "id" : "Typ-dodavatele/6dodavatel platformy", "kód" : "6dodavatel platformy", "popis" : { "cs" : "" } },
+{ "type" : [ "Typ-dodavatele", "položka" ], "id" : "Typ-dodavatele/6", "kód" : "6", "popis" : { "cs" : "Dodavatel platformy" } },
 { "type" : [ "Typ-dodavatele", "položka" ], "id" : "Typ-dodavatele/7", "kód" : "7", "popis" : { "cs" : "dodavatel provozní podpory" } }
 
  ]}

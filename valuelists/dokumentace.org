@@ -33,7 +33,7 @@ publikovaných číselníků:
 | Číselník kategorií nákladů financování informačních systémů |   1.0 | 2020-08-01 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/aplikacni_podpor.json                 |
 | Číselník stavů aplikační podpory                            |   1.0 | 2020-12-30 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_aplikacni_podpory.json |
 | Číselník stavů naplnění povinnosti                          |   1.0 | 2020-12-30 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_stavy_plneni_povinnosti.json |
-| Číselník typů dodavatelů informačních systémů               |   1.0 | 2020-08-01 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_typy_dodavatelu_is.json      |
+| Číselník typů dodavatelů informačních systémů               |   1.1 | 2020-08-01 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_typy_dodavatelu_is.json      |
 | Číselník titulů zpracování osobních údajů                   |   1.0 | 2020-08-01 | https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_tituly_zpracovani_udaju.json |
 #+END:
 ** HOTOVO Číselník etap fází informačního systému
@@ -160,10 +160,10 @@ publikovaných číselníků:
  | nerelevantni | Nerelevantní |
  | plni         | Plní zcela   |
 
-** HOTOVO Číselník typů dodavatelů informačních systémů
+** AKTUALIZOVÁNO Číselník typů dodavatelů informačních systémů
    :PROPERTIES:
    :Identifikátor: Typy-dodavatelů-IS
-   :Verze:    1.0
+   :Verze:    1.1
    :Datum:    2020-08-01
    :Popis:    Tento číselník obsahuje závazné typy dodavatelů využívané pro evidence o informačních systémech a pro řízení dodavatelských vztahů v rámci ICT projektů. Určuje jej závazně vyhláška 329/2020 a využívá se i v evidencích podle Národní architektury eGovernmentu.
     :URL:      https://github.com/OPENCZEG/czeg_tools/blob/master/valuelists/ciselnik_typy_dodavatelu_is.json
@@ -180,6 +180,11 @@ Tento číselník obsahuje následující hodnoty:
 | 6dodavatel platformy |  |
 | 7 | dodavatel provozní podpory |
 
+Historie verzí:
+
+- 1.1: Oprava špatného záznamu u typu 6, veliká omluva. Takhle to
+  vypadá, když se to někdo snaží dělat ručně :-)
+- 1.0: První generrovaná verze
 ** HOTOVO Číselník titulů zpracování osobních údajů
     :PROPERTIES:
     :Identifikátor: Tituly-zpracování-OU
